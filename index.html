@@ -1,0 +1,1164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="GraphAdda is a creative design studio specialising in packaging, logo design, brand identity and visual communication.">
+<title>GraphAdda | Creative Design Studio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #09283c;
+  --blue: #08749a;
+  --teal: #16b99a;
+  --dark-teal: #087e7d;
+  --text: #142536;
+  --muted: #64717b;
+  --light: #f3f8fa;
+  --white: #ffffff;
+  --line: #e4eaed;
+  --gradient: linear-gradient(110deg,#08749a,#17b991);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background: white;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(1180px, calc(100% - 64px));
+  margin: auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid #edf0f1;
+  box-shadow: 0 2px 12px rgba(0,0,0,.025);
+}
+
+.navbar {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1.4px;
+  white-space: nowrap;
+}
+
+.logo-name span {
+  color: var(--dark-teal);
+}
+
+.logo-symbol {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background: var(--gradient);
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+  transform: skew(-12deg);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-links a {
+  position: relative;
+  font-size: 11px;
+  font-weight: 500;
+  color: #53606a;
+  transition: color .2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--dark-teal);
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--teal);
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 23px;
+  background: var(--gradient);
+  color: white;
+  border: 0;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(8,130,140,.2);
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+/* IMAGE PLACEHOLDERS */
+
+.image-placeholder {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgba(255,255,255,.9);
+  background:
+    radial-gradient(ellipse at 75% 25%,rgba(35,190,165,.55),transparent 35%),
+    radial-gradient(ellipse at 20% 90%,rgba(7,104,145,.65),transparent 45%),
+    linear-gradient(130deg,#071d34,#0a4855 65%,#0d806e);
+}
+
+.image-placeholder::before {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 120%;
+  border: 1px solid rgba(255,255,255,.13);
+  transform: rotate(35deg);
+}
+
+.placeholder-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.placeholder-content strong {
+  display: block;
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+.placeholder-content small {
+  display: block;
+  margin-top: 8px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: .8;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 390px;
+  background: linear-gradient(105deg,#f2f8fa 0%,#f6fafb 42%,#e8f0ef 100%);
+  overflow: hidden;
+}
+
+.hero-grid {
+  min-height: 390px;
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-content {
+  padding: 43px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: var(--dark-teal);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.eyebrow::after {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 1px;
+  background: var(--teal);
+  vertical-align: middle;
+  margin-left: 9px;
+}
+
+.hero h1 {
+  max-width: 540px;
+  font-size: clamp(34px,4.1vw,54px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: var(--navy);
+}
+
+.hero h1 span {
+  display: block;
+  color: #369f9a;
+  font-weight: 500;
+}
+
+.hero-description {
+  max-width: 470px;
+  margin-top: 17px;
+  color: #53616c;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.hero-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin: 22px 0 25px;
+}
+
+.hero-service {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 17px;
+  border-right: 1px solid #cbd5d9;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.hero-service:last-child {
+  border: 0;
+}
+
+.hero-service span {
+  color: var(--dark-teal);
+  font-size: 19px;
+}
+
+.hero-visual {
+  min-height: 340px;
+  height: 100%;
+  align-self: stretch;
+  background:
+    radial-gradient(ellipse at 68% 50%,rgba(26,185,157,.65),transparent 35%),
+    linear-gradient(130deg,#e6f0ed,#a4c5b6 45%,#dce8e1);
+}
+
+.hero-visual .placeholder-content strong {
+  font-size: clamp(25px,3vw,40px);
+  color: #10374b;
+}
+
+.hero-visual .placeholder-content small {
+  color: #10374b;
+}
+
+/* SECTION COMMON */
+
+.section {
+  padding: 44px 0;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  font-size: 27px;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -.7px;
+  color: var(--navy);
+}
+
+.section-heading p {
+  margin-top: 9px;
+  max-width: 330px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.outline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 17px;
+  border: 1px solid #55a7a0;
+  border-radius: 25px;
+  color: var(--dark-teal);
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 16px;
+  transition: .2s;
+}
+
+.outline-btn:hover {
+  background: var(--dark-teal);
+  color: white;
+}
+
+/* SERVICES */
+
+.services-layout {
+  display: grid;
+  grid-template-columns: .85fr 2.15fr;
+  gap: 38px;
+  align-items: center;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.service-card {
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  overflow: hidden;
+  background: white;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(10,40,60,.08);
+}
+
+.service-image {
+  aspect-ratio: 1.65 / 1;
+}
+
+.service-image.one {
+  background: linear-gradient(140deg,#103b32,#0e7860,#b1a77d);
+}
+
+.service-image.two {
+  background: linear-gradient(130deg,#101b2c,#5a4936,#b99b61);
+}
+
+.service-image.three {
+  background: linear-gradient(130deg,#dce9e9,#086b80,#06344c);
+}
+
+.service-info {
+  padding: 13px 15px 16px;
+}
+
+.service-icon {
+  color: var(--dark-teal);
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.service-info h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.service-info p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  min-height: 38px;
+}
+
+.learn-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--dark-teal);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+  background: #f1f7fa;
+}
+
+.portfolio-layout {
+  display: grid;
+  grid-template-columns: .85fr 2.15fr;
+  gap: 38px;
+  align-items: center;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+}
+
+.portfolio-card {
+  min-width: 0;
+}
+
+.portfolio-image {
+  aspect-ratio: 1.15 / 1;
+  border-radius: 3px;
+  transition: transform .3s;
+}
+
+.portfolio-card:hover .portfolio-image {
+  transform: translateY(-4px);
+}
+
+.portfolio-image.p1 {
+  background: linear-gradient(135deg,#193d32,#678b59,#d5c49c);
+}
+
+.portfolio-image.p2 {
+  background: linear-gradient(135deg,#121b29,#292a28,#b49a5d);
+}
+
+.portfolio-image.p3 {
+  background: linear-gradient(135deg,#d7b54b,#2c9b54,#f2e7bd);
+}
+
+.portfolio-image.p4 {
+  background: linear-gradient(135deg,#b5a48b,#ede6d9,#7c7464);
+}
+
+.portfolio-card p {
+  margin-top: 9px;
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+/* ABOUT */
+
+.about {
+  padding: 48px 0;
+  background:
+    radial-gradient(ellipse at 100% 50%,rgba(0,158,126,.35),transparent 35%),
+    linear-gradient(110deg,#031d30,#00364b 65%,#07544c);
+  color: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about .eyebrow {
+  color: #8ed7ce;
+}
+
+.about h2 {
+  font-size: 28px;
+  line-height: 1.35;
+  letter-spacing: -.8px;
+}
+
+.about h2 span {
+  color: #4ac4ac;
+}
+
+.about-copy p {
+  color: #d0e0e4;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 17px;
+}
+
+.values span {
+  font-size: 9px;
+  color: #b9dedc;
+}
+
+.about-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-logo .logo-symbol {
+  width: 85px;
+  height: 85px;
+  font-size: 48px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.2);
+}
+
+.about-logo .logo-name {
+  margin-top: 12px;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.about-logo small {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #a6c6c8;
+}
+
+/* CONTACT */
+
+.contact-strip {
+  padding: 22px 0;
+  background: #f9fbfc;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1.5fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.contact-logo .logo-symbol {
+  width: 34px;
+  height: 34px;
+  font-size: 18px;
+}
+
+.contact-message {
+  border-left: 1px solid var(--line);
+  padding-left: 25px;
+}
+
+.contact-message strong {
+  display: block;
+  font-size: 13px;
+}
+
+.contact-message p {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.contact-links a:hover {
+  color: var(--dark-teal);
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 9px;
+}
+
+.socials a {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #172e40;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  transition: background .2s;
+}
+
+.socials a:hover {
+  background: var(--teal);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 12px 0;
+  background: #f9fbfc;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  color: #75818a;
+  font-size: 9px;
+}
+
+.footer-categories {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-categories a:hover {
+  color: var(--dark-teal);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+  .container {
+    width: calc(100% - 42px);
+  }
+
+  .nav-links {
+    gap: 17px;
+  }
+
+  .navbar > .btn {
+    padding: 11px 15px;
+  }
+
+  .services-layout,
+  .portfolio-layout {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+
+  .services-layout .section-heading,
+  .portfolio-layout .section-heading {
+    max-width: 520px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1.3fr;
+  }
+
+  .about-logo {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .about-logo .logo-name {
+    margin: 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+@media(max-width:650px) {
+  .container {
+    width: calc(100% - 36px);
+  }
+
+  .navbar {
+    height: 68px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .navbar > .btn {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    padding: 20px 25px 28px;
+    background: white;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 12px 20px rgba(0,0,0,.06);
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-links a.active::after {
+    display: none;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .hero-content {
+    padding: 43px 0 28px;
+  }
+
+  .hero h1 {
+    font-size: clamp(37px,10vw,53px);
+  }
+
+  .hero-visual {
+    min-height: 245px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+  }
+
+  .hero-services {
+    gap: 10px;
+  }
+
+  .hero-service {
+    font-size: 9px;
+    padding-right: 10px;
+  }
+
+  .section {
+    padding: 36px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-image {
+    aspect-ratio: 1.9 / 1;
+  }
+
+  .service-info p {
+    min-height: 0;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+  }
+
+  .portfolio-image {
+    aspect-ratio: 1.15 / 1;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .about-logo {
+    grid-column: auto;
+    justify-content: flex-start;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .contact-message {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 17px 0 0;
+  }
+
+  .socials {
+    justify-content: flex-start;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-categories {
+    flex-wrap: wrap;
+  }
+}
+
+/* Verified portfolio assets, stored with the website. */
+.brand-logo{width:100px;height:66px;object-fit:contain;flex-shrink:0}
+.hero-visual{min-height:0;align-self:center;height:auto;border-radius:8px;overflow:hidden;background:#eef2f0;margin:28px 0;box-shadow:0 18px 42px rgba(9,40,60,.12)}
+.hero-visual img{width:100%;height:auto;aspect-ratio:1179/847;object-fit:contain}
+.service-image,.portfolio-image{overflow:hidden;aspect-ratio:4/3;background:#e9eeee!important}
+.service-image img,.portfolio-image img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.service-card:hover img,.portfolio-card:hover img{transform:scale(1.025)}
+.portfolio-image.p4 img{object-fit:contain;background:#10283b}
+.about-logo{background:#fff;border-radius:8px;padding:18px;gap:8px}
+.about-logo .brand-logo{width:190px;height:128px}
+.about-logo small{color:#087e7d;letter-spacing:2px}
+.contact-logo .brand-logo{width:105px;height:70px}
+@media(max-width:600px){.hero-visual{margin:0 0 28px}.hero-visual img{height:auto;object-fit:contain}.brand-logo{width:90px;height:60px}.service-image{aspect-ratio:4/3}.portfolio-image{aspect-ratio:4/3}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container navbar">
+
+    <a href="#home" class="logo" aria-label="GraphAdda home">
+      <img class="brand-logo" src="assets/graphadda-logo.png" alt="GraphAdda" width="1536" height="1024">
+    </a>
+
+    <button class="mobile-toggle" id="mobileToggle"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">HOME</a>
+      <a href="#services">SERVICES</a>
+      <a href="#portfolio">PORTFOLIO</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <a class="btn" href="#contact">START A PROJECT <span>→</span></a>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+      <div class="eyebrow">Creative Design Studio</div>
+
+      <h1>
+        Packaging. Logos.<br>
+        Visual Identity.
+        <span>That Builds Brands.</span>
+      </h1>
+
+      <p class="hero-description">
+        GraphAdda creates distinctive brand experiences through
+        strategic design, premium packaging and powerful visual identity.
+      </p>
+
+      <div class="hero-services">
+        <div class="hero-service"><span>⬡</span> Packaging Design</div>
+        <div class="hero-service"><span>◇</span> Logo Design</div>
+        <div class="hero-service"><span>▱</span> Visual Identity</div>
+      </div>
+
+      <a href="#portfolio" class="btn">EXPLORE OUR WORK <span>→</span></a>
+    </div>
+
+    <div class="hero-visual"><img src="assets/graphadda-hero.jpg" alt="GraphAdda navy and teal packaging and stationery brand presentation" loading="eager" decoding="async" fetchpriority="high"></div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container services-layout">
+
+    <div class="section-heading">
+      <div class="eyebrow">Our Services</div>
+      <h2>Creative Solutions<br>for Your Brand</h2>
+      <p>
+        We combine creativity with strategy to deliver designs
+        that not only look amazing but also make a lasting impact.
+      </p>
+      <a href="#contact" class="outline-btn">VIEW ALL SERVICES →</a>
+    </div>
+
+    <div class="service-cards">
+
+      <article class="service-card">
+        <div class="service-image one"><img src="assets/haircare.avif" alt="Reframe premium haircare packaging concept" loading="lazy" decoding="async"></div>
+        <div class="service-info">
+          <div class="service-icon">⬡</div>
+          <h3>Packaging Design</h3>
+          <p>Premium packaging that attracts, protects and sells.</p>
+          <a href="#contact" class="learn-link">LEARN MORE →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-image two"><img src="assets/fragrance.avif" alt="DOEL fragrance logo and packaging concept" loading="lazy" decoding="async"></div>
+        <div class="service-info">
+          <div class="service-icon">◇</div>
+          <h3>Logo Design</h3>
+          <p>Unique and memorable brand marks that last.</p>
+          <a href="#contact" class="learn-link">LEARN MORE →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-image three"><img src="assets/coffee.avif" alt="bTd Coffee visual identity and packaging concept" loading="lazy" decoding="async"></div>
+        <div class="service-info">
+          <div class="service-icon">▱</div>
+          <h3>Visual Identity</h3>
+          <p>Complete brand systems for a consistent presence.</p>
+          <a href="#contact" class="learn-link">LEARN MORE →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section portfolio" id="portfolio">
+  <div class="container portfolio-layout">
+
+    <div class="section-heading">
+      <div class="eyebrow">Featured Work</div>
+      <h2>Our Creative<br>Portfolio</h2>
+      <p>
+        Explore a selection of our projects in packaging,
+        logo design and brand identity.
+      </p>
+      <a href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h"
+         target="_blank" rel="noopener" class="outline-btn">
+        VIEW ALL PROJECTS →
+      </a>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <a class="portfolio-card" href="https://contra.com/p/6PlcceNl-reframe-or-premium-haircare-packaging-design" target="_blank" rel="noopener"><div class="portfolio-image p1"><img src="assets/haircare.avif" alt="Reframe haircare packaging" loading="lazy" decoding="async"></div><p>Reframe haircare packaging <span>→</span></p></a>
+
+      <a class="portfolio-card" href="https://contra.com/p/RWA7WkEZ-doel-and-luxury-fragrance-brand-identity-design" target="_blank" rel="noopener"><div class="portfolio-image p2"><img src="assets/fragrance.avif" alt="DOEL fragrance identity" loading="lazy" decoding="async"></div><p>DOEL fragrance identity <span>→</span></p></a>
+
+      <a class="portfolio-card" href="https://contra.com/p/g72oFkoe-b-td-coffee-premium-coffee" target="_blank" rel="noopener"><div class="portfolio-image p3"><img src="assets/coffee.avif" alt="bTd Coffee brand identity" loading="lazy" decoding="async"></div><p>bTd Coffee brand identity <span>→</span></p></a>
+
+      <a class="portfolio-card" href="https://contra.com/p/UWcgQbEM-premium-motivational-book-cover-and-editorial-branding" target="_blank" rel="noopener"><div class="portfolio-image p4"><img src="assets/book.avif" alt="To Climb the Broken Bridge book cover" loading="lazy" decoding="async"></div><p>To Climb the Broken Bridge book cover <span>→</span></p></a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container about-grid">
+
+    <div>
+      <div class="eyebrow">About GraphAdda</div>
+      <h2>
+        Designing Brands<br>
+        for a <span>Better Tomorrow.</span>
+      </h2>
+    </div>
+
+    <div class="about-copy">
+      <p>
+        GraphAdda is a creative design studio specialising in packaging
+        design, logo design and visual identity. We turn ideas into
+        powerful visual experiences that help businesses stand out,
+        connect with people and grow with confidence.
+      </p>
+
+      <div class="values">
+        <span>✧ Creative Excellence</span>
+        <span>♧ Client Focused</span>
+        <span>◇ Quality Driven</span>
+      </div>
+    </div>
+
+    <div class="about-logo"><img class="brand-logo" src="assets/graphadda-logo.png" alt="GraphAdda" width="1536" height="1024"><small>DESIGN · BRAND · GROW</small></div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-strip" id="contact">
+  <div class="container contact-grid">
+
+    <a href="#home" class="contact-logo">
+      <img class="brand-logo" src="assets/graphadda-logo.png" alt="GraphAdda" width="1536" height="1024">
+    </a>
+
+    <div class="contact-message">
+      <strong>Have a project in mind?</strong>
+      <p>Let's create something extraordinary together.</p>
+      <a class="btn" style="margin-top:10px"
+         href="mailto:graphadda@gmail.com?subject=GraphAdda%20Project%20Inquiry">
+        GET IN TOUCH →
+      </a>
+    </div>
+
+    <div class="contact-links">
+      <a href="mailto:graphadda@gmail.com">✉ graphadda@gmail.com</a>
+    </div>
+
+    <div class="socials">
+      <a href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h"
+         target="_blank" rel="noopener" aria-label="Contra">C</a>
+
+      <a href="mailto:graphadda@gmail.com"
+         aria-label="Email">@</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> GraphAdda Studio. All rights reserved.</p>
+
+    <div class="footer-categories">
+      <a href="#services">Packaging Design</a>
+      <a href="#services">Logo Design</a>
+      <a href="#services">Visual Identity</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Current year
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  // Mobile navigation
+  const mobileToggle = document.getElementById("mobileToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  mobileToggle.addEventListener("click", function () {
+    const open = navLinks.classList.toggle("show");
+    mobileToggle.textContent = open ? "×" : "☰";
+    mobileToggle.setAttribute("aria-expanded", String(open));
+  });
+
+  // Close mobile navigation after clicking a link
+  navLinks.querySelectorAll("a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      navLinks.classList.remove("show");
+      mobileToggle.textContent = "☰";
+      mobileToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Active navigation link while scrolling
+  const sections = document.querySelectorAll("main section[id]");
+  const menuLinks = document.querySelectorAll(".nav-links a");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          menuLinks.forEach(link => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === "#" + entry.target.id
+            );
+          });
+        }
+      });
+    }, {
+      rootMargin: "-30% 0px -60% 0px"
+    });
+
+    sections.forEach(section => observer.observe(section));
+  }
+</script>
+
+</body>
+</html>
